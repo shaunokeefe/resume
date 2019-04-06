@@ -4,19 +4,29 @@
 Melbourne, Australia 0401411773 shaun.okeefe.0@gmail.com
 
 # Skills
-* Experienced **devops** guy and **team lead**
-* Developing in **Python** and **Ruby**, writing web apps + backend APIs using **Django**, **Flask** and **Rails**
-* Heaps of experience in **ETL** and **data management**, data in **Postgres**
-* **Docker** and **Kubernetes**, but also experienced with **Chef**, **Puppet** and **Saltstack**
-* Experienced with **continuous delivery**, **testing**, using **Jenkins** and **Travis CI**
-* Extensive Infrastructure experience working with **AWS**, **Terraform**
-* Strong operations skills. System observability and reliability. **Monitoring**, **alerting**, **tracing**, **Linux** administration
+* Experienced **devops** guy, **SRE** and **team lead**
+* Developing in **Python** and **Ruby**
+* Experience with **Cloud Native** architecture using **Docker**, **Consul** and **Kubernetes**
+* System observability and reliability. **Monitoring** and **alerting** with **Prometheus**, **tracing** with **Jaeger**
+* Extensive Infrastructure experience working with **AWS**, **Terraform** and **Cloudformation**
+* Experienced with **continuous delivery**, **testing**, using **Jenkins**, **Travis CI** and **Buildkite**
+* Heaps of experience in **ETL** and **data management**, data in **Postgres** and **MySQL**
+* Strong operations skills. Know my way around **Linux** 
 * Mad **Git** chops
 * Extensive **management** experience, particularly in standing up **new teams** and designing **development processes**
-* Keen on **communication** and **process improvement**. Feel strongly about **Slack**, **Wikis** and **issue tracking**
+* Keen on **communication** and **process improvement**. Feel strongly about **Slack**, **documentation** and **issue tracking**
 
 
 # Where I've Worked
+## Stile Education ##
+### Senior Software Engineer ###
+- Senior member of operations team responsible for availablity of site servicing over **10,000 simultaneous users**
+- Responsible for full spectrum of operations activities
+- Developed alerting and monitoring systems in **Prometheus** to improve reliability, observability, and decrease page rates
+- Simplified management of production infrastructure from internally developed tools to standardised, industry proven technologies such as **Terraform**
+- Evangelised for and implemented migration of operations and internal services from statically provisioned EC2 instances to **Kubernetes**
+- Also contributed to backend developement on our **Ruby** and **Docker** based **microservice** stack
+
 ## Landchecker ##
 ### Chief Technical Officer ###
 *August 2017 to present*
