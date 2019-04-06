@@ -1,7 +1,7 @@
 
 # Shaun O'Keefe - Software Developer
 
-| Melbourne, Australia | 0401411773 | shaun.okeefe.0@gmail.com
+Melbourne, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 
 # Skills
 * Experienced **devops** guy, **SRE** and **team lead**
