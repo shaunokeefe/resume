@@ -21,12 +21,12 @@ Melbourne, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 ## Stile Education ##
 ### Senior Software Engineer ###
 *March 2018 to present*
-- Senior member of operations team responsible for availablity of site servicing over **10,000 simultaneous users**
+- Senior member of operations team responsible for availability of site servicing over **10,000 simultaneous users**
 - Responsible for full spectrum of operations activities
 - Developed alerting and monitoring systems in **Prometheus** to improve reliability, observability, and decrease page rates
 - Simplified management of production infrastructure from internally developed tools to standardised, industry proven technologies such as **Terraform**
 - Evangelised for and implemented migration of operations and internal services from statically provisioned EC2 instances to **Kubernetes**
-- Also contributed to backend developement on our **Ruby** and **Docker** based **microservice** stack
+- Also contributed to backend development on our **Ruby** and **Docker** based **microservice** stack
 
 ## Landchecker ##
 ### Chief Technical Officer ###
@@ -34,10 +34,10 @@ Melbourne, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 
 Oversaw development, delivery and operation of a popular real estate site, written using Rails, Ember.js, PostGIS, Mapbox, and running off tonnes of open government data.
 
-- **Grew team** from 1 developer to 4 mutli-disciplined engineers
+- **Grew team** from 1 developer to 4 multi-disciplined engineers
 - Quickly expanded knowledge across all technical and business aspects of product
 - **Managed software delivery** and day-to-day operation of team
-- Implemented **sprints** and process for planning and tracking work, **code reviews**, **post mortems**
+- Implemented **sprints** and process for planning and tracking work, **code reviews**, **post-mortems**
 - Responsible for **estimation**, **forecasting**, **planning** and **hiring** to meet needs of growing organisation
 - Continued **operations** role managing infrastructure (**Kubernetes**, **AWS**, **CI pipelines**, and **system observability**)
 - Ongoing ownership of **ETL** pipelines and data products, primary touch point for domain data knowledge
@@ -45,7 +45,7 @@ Oversaw development, delivery and operation of a popular real estate site, writt
 - Handled **product management** and **product roadmap**, pushed for addition of a formal Product Manager position, and worked with PM to design a system for managing roadmap
 - **Managed relationships** and planning for third party integrations and partnerships
 - Pushed for increased focus on **analytics** and **customer relationship management** using **Mixpanel** and **Intercom**
-- Delivered multiple new products in short timeframe. Pushed for MVP where possible and used evidence based decision making
+- Delivered multiple new products in short timeframe. Pushed for MVP where possible and used evidence-based decision making
 - Managed planning and expansion of product from Victoria into NSW
 
 ## Landchecker ##
@@ -67,27 +67,27 @@ Data and operations specialist working under CTO building a real estate start up
 ### Senior Software Developer - Data Science
 *January 2016 to December 2016*
 
-Senior data developer and tech lead, overseeing softare developent, operations and planning
+Senior data developer and tech lead, overseeing software development, operations and planning
 
-- **Lead multi-discuplinary team** of 4 developers (data science, operations, software), centered around **ETL** and **data analysis**
+- **Lead multi-disciplinary team** of 4 developers (data science, operations, software), centred around **ETL** and **data analysis**
 - Developed repeatable process for provisioning ETL pipelines for diverse range of clients using **AWS**, **Python**, **Pandas** and **Terraform**.
 - Worked with customers to curate data from multiple sources and expose valuable insights from Google Analytics, Salesforce, clickstream data, and other bespoke data sources
-- Implemented and managed **high availablity** **AWS** environment for a major airline, sending tens of thousand of itineraries per day. **Monitoring, testing, tooling and automation**.
+- Implemented and managed **high-availablity** **AWS** environment for a major airline, sending tens of thousands of itineraries per day. **Monitoring, testing, tooling and automation**.
 - Iterated on above design to deliver a **serverless microservices** setup using AWS **Lambda** and **API Gateway** for a second major carrier
 - Refined customer ideas into formal designs and requirements, planed work and iterated on requirements
 - Used **Slack** and **Trello** to centralise information, and organise priorities amidst a dynamically changing and high throughput schedule
 
 ## Qualcomm Inc.
 ### Senior Software Engineer
-*October 2014 to Decemer 2015*
+*October 2014 to December 2015*
 
 Hired as a consultant on devops practices
 
-- Implemented a **continuous integration** pipeline for a high profile **AWS** AMI product which was facing reproducability and configuration issues, using **Chef**, **Jenkins**, **Test Kitchen**, **ServerSpec**, **Packer** and **Hipchat**
+- Implemented a **continuous integration** pipeline for a high profile **AWS** AMI product which was facing reproducibility and configuration issues, using **Chef**, **Jenkins**, **Test Kitchen**, **ServerSpec**, **Packer** and **Hipchat**
 - Migrated development, test and production infrastructure from statically allocated VMs to **Openstack**, improving server utilisation, application isolation and manageability.
 - Helped other projects incorporate configuration management using **Chef** into operations workflow enable use of immutable infrastructure on **Openstack** VMs
 - Made **Test Kitchen** with **Vagrant/Openstack** a standard part of our development workflow to allow for quick iteration and prototyping, and remove the gap between our development and production environments
-- Encouraged use of **Hipchat** as a hub for team discussion, decreasing the siloing of imformation, using automated notifications and monitoring in channel to improve visibility of work and operations
+- Encouraged use of **Hipchat** as a hub for team discussion, decreasing the siloing of information, using automated notifications and monitoring in channel to improve visibility of work and operations
 - Improved team communication and collaboration of distributed team by championing use of **Hipchat**, formalising use of **Github issues** and **Git Flow**
 
 ## JBA Digital
@@ -98,7 +98,7 @@ Django developer, with a focus on live analytics, also covering operations work 
 
 - Developed a customer facing **Django** application responsible for tens of thousands of transactions a day, with high expectations of uptime and reliability. Hosted on **AWS**, **MySQL**, **Riak** and **RabbitMQ**.
 - Worked with **Saltstack** to manage a large collection of servers in both production and testing environments
-- Introducted **pystest** testing and brought both functional and unit test coverage up to dependable levels in order to decrease regeressions and improve platform reliability, using **Jenkins** for **CI**
+- Introduced **pystest** testing and brought both functional and unit test coverage up to dependable levels in order to decrease regressions and improve platform reliability, using **Jenkins** for **CI**
 - Deployed **Hubot** into our office **Slack** to improve visibility of test results, monitoring and repository activity. Improved participation in Slack chat by authoring a number of custom Hubot plugins to entice staff (e.g. plugin for ordering dumplings for lunch)
 - Automated a number of regular manual data entry and update tasks, freeing up engineers for more important work and allowing us to update important tables of data quicker and more reliable, improving profits for clients
 - **Worked directly with clients** on new deployments of product
@@ -109,7 +109,7 @@ Django developer, with a focus on live analytics, also covering operations work 
 
 Django developer, working in particular in data management, with a focus on cloud infrastructure and operations
 
-* Developer on MyTardis, a **data management** system for research experiment data. Developed in **Django**. Contributed to a multi-institutional open-source community. Responsible for deployment and maintainence of the system at the Australian Synchrotron.
+* Developer on MyTardis, a **data management** system for research experiment data. Developed in **Django**. Contributed to a multi-institutional open-source community. Responsible for deployment and maintenance of the system at the Australian Synchrotron.
 * Developed TUGG, a social data repository for historical music data. Used **Django**, **SOLR**, **MySQL**, and an **Nginx**/**Gunicorn** stack. of Solely responsible for development, deployment and operations. Worked with customers to customers to refine requirements, and identify valuable new features.
 * Worked on the **Nectar Research Cloud**, a deployment of the **OpenStack** open-source cloud library, written in **Python**,  at the University of Melbourne.
 
