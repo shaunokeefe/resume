@@ -19,6 +19,9 @@ Melbourne, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 
 # Where I've Worked
 ## Stile Education ##
+### Head of Infrastructure and SRE ###
+*December 2019 to present*
+
 ### Senior Software Engineer ###
 *March 2018 to present*
 - Senior member of operations team responsible for availablity of site servicing over **10,000 simultaneous users**
