@@ -23,7 +23,7 @@ Melbourne, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 *December 2019 to present*
 
 ### Senior Software Engineer ###
-*March 2018 to present*
+*March 2018 to December 2019*
 - Senior member of operations team responsible for availablity of site servicing over **10,000 simultaneous users**
 - Responsible for full spectrum of operations activities
 - Developed alerting and monitoring systems in **Prometheus** to improve reliability, observability, and decrease page rates
