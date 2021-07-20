@@ -1,34 +1,39 @@
 
-# Shaun O'Keefe - Software Developer
+# Shaun O'Keefe - Infrastructure engineer and engineering manager
 
-Melbourne, Australia | 0401411773 | shaun.okeefe.0@gmail.com
+Northcote, VIC, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 
 # Skills
-* Experienced **devops** guy, **SRE** and **team lead**
-* Developing in **Python** and **Ruby**
-* Experience with **Cloud Native** architecture using **Docker**, **Consul** and **Kubernetes**
+* Experienced **devops** guy, **SRE** and **engineering lead**
+* Extensive **management** experience, particularly in building **close-knit, high-performing teams**
+* Can work on high level **strategy** for supporting business through reliable, maintainable infrastructure
+* Experience with **cloud native** architecture using **Docker**, **Consul** and **Kubernetes**
+* Extensive Infrastructure experience working with **AWS**, with **Terraform** for **Infrastructure as Code*
 * System observability and reliability. **Monitoring** and **alerting** with **Prometheus**, **tracing** with **Jaeger**
-* Extensive Infrastructure experience working with **AWS**, **Terraform** and **Cloudformation**
-* Experienced with **continuous delivery**, **testing**, using **Jenkins**, **Travis CI** and **Buildkite**
-* Heaps of experience in **ETL** and **data management**, data in **Postgres** and **MySQL**
-* Strong operations skills. Know my way around **Linux** 
-* Mad **Git** chops
-* Extensive **management** experience, particularly in standing up **new teams** and designing **development processes**
-* Keen on **communication** and **process improvement**. Feel strongly about **Slack**, **documentation** and **issue tracking**
+* Experienced with **continuous integration**, **continuous delivery**, **Buildkite**
+* Strong operations skills. Does okay with **Linux** 
+* Developing in **Python**, **Ruby** and **Rust**
 
 
 # Where I've Worked
 ## Stile Education ##
+### Head of Platform ###
+*Jan 2021 to present*
+- Took over strategic remit of CI, developer experience and data to provide an overall platform for application developers to deliver business value
+- Oversaw, people managers covering individual strategic areas of Platform
+
 ### Head of Infrastructure and SRE ###
-*December 2019 to present*
+*December 2019 to Jan 2021*
+- Took over management of the Infrastructure and SRE team, growing it to three engineers. 
+- Managed SLOs and ongoing improvement of product reliability, both through strategic projects and ongoing learning processes such as post mortems
+- Ran oncall shift
+- Oversaw rapid scale-up during the 2020 switch to remote learning, growing from 10,000 concurrent users to over 80,000 concurrent users
 
 ### Senior Software Engineer ###
 *March 2018 to December 2019*
 - Senior member of operations team responsible for availablity of site servicing over **10,000 simultaneous users**
-- Responsible for full spectrum of operations activities
 - Developed alerting and monitoring systems in **Prometheus** to improve reliability, observability, and decrease page rates
 - Simplified management of production infrastructure from internally developed tools to standardised, industry proven technologies such as **Terraform**
-- Evangelised for and implemented migration of operations and internal services from statically provisioned EC2 instances to **Kubernetes**
 - Also contributed to backend developement on our **Ruby** and **Docker** based **microservice** stack
 
 ## Landchecker ##
@@ -84,50 +89,32 @@ Senior data developer and tech lead, overseeing softare developent, operations a
 ### Senior Software Engineer
 *October 2014 to Decemer 2015*
 
-Hired as a consultant on devops practices
+Hired as a consultant on devops practices.
 
 - Implemented a **continuous integration** pipeline for a high profile **AWS** AMI product which was facing reproducability and configuration issues, using **Chef**, **Jenkins**, **Test Kitchen**, **ServerSpec**, **Packer** and **Hipchat**
 - Migrated development, test and production infrastructure from statically allocated VMs to **Openstack**, improving server utilisation, application isolation and manageability.
 - Helped other projects incorporate configuration management using **Chef** into operations workflow enable use of immutable infrastructure on **Openstack** VMs
 - Made **Test Kitchen** with **Vagrant/Openstack** a standard part of our development workflow to allow for quick iteration and prototyping, and remove the gap between our development and production environments
-- Encouraged use of **Hipchat** as a hub for team discussion, decreasing the siloing of imformation, using automated notifications and monitoring in channel to improve visibility of work and operations
-- Improved team communication and collaboration of distributed team by championing use of **Hipchat**, formalising use of **Github issues** and **Git Flow**
+
 
 ## JBA Digital
 ### Application Engineer
 *January 2014 to to October 2014*
 
-Django developer, with a focus on live analytics, also covering operations work and automation
-
-- Developed a customer facing **Django** application responsible for tens of thousands of transactions a day, with high expectations of uptime and reliability. Hosted on **AWS**, **MySQL**, **Riak** and **RabbitMQ**.
-- Worked with **Saltstack** to manage a large collection of servers in both production and testing environments
-- Introducted **pystest** testing and brought both functional and unit test coverage up to dependable levels in order to decrease regeressions and improve platform reliability, using **Jenkins** for **CI**
-- Deployed **Hubot** into our office **Slack** to improve visibility of test results, monitoring and repository activity. Improved participation in Slack chat by authoring a number of custom Hubot plugins to entice staff (e.g. plugin for ordering dumplings for lunch)
-- Automated a number of regular manual data entry and update tasks, freeing up engineers for more important work and allowing us to update important tables of data quicker and more reliable, improving profits for clients
-- **Worked directly with clients** on new deployments of product
+Django developer, primarily working on JBA's live analytics platform. Also did extensive work developing configuration management and testing for the platform.
 
 ## VeRSI
 ### Senior Software Engineer
 *March 2011 to December 2013*
 
-Django developer, working in particular in data management, with a focus on cloud infrastructure and operations
-
-* Developer on MyTardis, a **data management** system for research experiment data. Developed in **Django**. Contributed to a multi-institutional open-source community. Responsible for deployment and maintainence of the system at the Australian Synchrotron.
-* Developed TUGG, a social data repository for historical music data. Used **Django**, **SOLR**, **MySQL**, and an **Nginx**/**Gunicorn** stack. of Solely responsible for development, deployment and operations. Worked with customers to customers to refine requirements, and identify valuable new features.
-* Worked on the **Nectar Research Cloud**, a deployment of the **OpenStack** open-source cloud library, written in **Python**,  at the University of Melbourne.
+Django developer working in data management, with a focus on cloud infrastructure and operations. Delivered multiple high value projects, such as the Australian Synchrotron's MyTardis beamlime spectography data repository, and Deakin Univesity's Ultimate Gig Guide. Worked extensively with customers to gather and refine requirements, and handled ongoing maintenance of products after delivery.
 
 
 ## Canon Information Systems Research Australia
 ### Standard Software Engineer
 *February 2007 to February 2011*
 
-Worked mostly in small teams with a strong focus on individual ownership of tasks, communication and code quality.
-
-* Specified, developed and delivered a document security library in C++ to be used in Canon ImageRunners, liaising extensively with customers. Documented own work and provided technology transfer.
- * Streamlined regression tests for code by implementing a custom test harness which provides complex image processing using Python
-* Prototyped now productized document work flow technology based on QR Codes on both PC and embedded platforms. Adhered to QR specification. Constructed hands-on demo for customers. Demonstrated technology to customers in Japanese where appropriate.
-* Researched ideas for an emerging anti-tamper technology, identified problem domain and communicated results to customers, demonstrating with a C++ implementation. Required knowledge of image processing, information theory, security and Steganography.
-* Inventor or co-inventor on eight patents, many of which were assigned high value. Organised lunchtime seminars for staff, attended careers fairs and spoke at universities on behalf of the company. MC at the 2008 Christmas party.
+Worked mostly in small, highly independent teams delivering practical implementation of CiSRAs imaging research. Worked on various projects from document security libraries to be used in Canon ImageRunners, to anti-tamper technology, to embedded implementations for QR code scanners. Worked extensively with customers at Canon Japan, leveraging my Japanese skills.
 
 ## Henderson Matusch
 ### Programmer / Database Admin
@@ -156,8 +143,8 @@ Completed a year’s exchange studying Japanese. Completed extra units of study 
 
 References
 ==========
+Timothy Asquith | Senior Software Developer, Blake Education
+
 Andrew Fisher | CTO, LUXE
 
 Matthew Duggan | Engineering Manager, Indeed Japan
-
-Kieran Spear | Senior Software Engineer, Aptira Openstack Services
