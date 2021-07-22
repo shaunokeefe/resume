@@ -74,20 +74,13 @@ Senior data developer and tech lead, overseeing softare developent, operations a
 - Developed repeatable process for provisioning ETL pipelines for diverse range of clients using **AWS**, **Python**, **Pandas** and **Terraform**.
 - Worked with customers to curate data from multiple sources and expose valuable insights from Google Analytics, Salesforce, clickstream data, and other bespoke data sources
 - Implemented and managed **high availablity** **AWS** environment for a major airline, sending tens of thousand of itineraries per day. **Monitoring, testing, tooling and automation**.
-- Iterated on above design to deliver a **serverless microservices** setup using AWS **Lambda** and **API Gateway** for a second major carrier
 - Refined customer ideas into formal designs and requirements, planed work and iterated on requirements
-- Used **Slack** and **Trello** to centralise information, and organise priorities amidst a dynamically changing and high throughput schedule
 
 ## Qualcomm Inc.
 ### Senior Software Engineer
 *October 2014 to Decemer 2015*
 
-Hired as a consultant on devops practices.
-
-- Implemented a **continuous integration** pipeline for a high profile **AWS** AMI product which was facing reproducability and configuration issues, using **Chef**, **Jenkins**, **Test Kitchen**, **ServerSpec**, **Packer** and **Hipchat**
-- Migrated development, test and production infrastructure from statically allocated VMs to **Openstack**, improving server utilisation, application isolation and manageability.
-- Helped other projects incorporate configuration management using **Chef** into operations workflow enable use of immutable infrastructure on **Openstack** VMs
-- Made **Test Kitchen** with **Vagrant/Openstack** a standard part of our development workflow to allow for quick iteration and prototyping, and remove the gap between our development and production environments
+Hired as a consultant on devops practices. Assisted other teams working with **continuous integration**, **cloud infrastructure**, **configuration managememnt** and **Infrastructure as Code**. Migrated development, testing and production infrastructue from statically allocated VMs to **Openstack**, improving server utilisation, application isolation and manageability.
 
 
 ## JBA Digital
