@@ -1,5 +1,5 @@
 
-# Shaun O'Keefe - Infrastructure engineer and engineering manager
+# Shaun O'Keefe - Infrastructure engineer, manager
 
 Northcote, VIC, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 
@@ -8,7 +8,7 @@ Northcote, VIC, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 * Extensive **management** experience, particularly in building **close-knit, high-performing teams**
 * Can work on high level **strategy** for supporting business through reliable, maintainable infrastructure
 * Experience with **cloud native** architecture using **Docker**, **Consul** and **Kubernetes**
-* Extensive Infrastructure experience working with **AWS**, with **Terraform** for **Infrastructure as Code*
+* Extensive infrastructure experience working with **AWS**. **Terraform** for **Infrastructure as Code*
 * System observability and reliability. **Monitoring** and **alerting** with **Prometheus**, **tracing** with **Jaeger**
 * Experienced with **continuous integration**, **continuous delivery**, **Buildkite**
 * Strong operations skills. Does okay with **Linux** 
@@ -20,13 +20,15 @@ Northcote, VIC, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 ### Head of Platform ###
 *Jan 2021 to present*
 - Took over strategic remit of CI, developer experience and data to provide an overall platform for application developers to deliver business value
-- Oversaw, people managers covering individual strategic areas of Platform
+- Developer hiring strategy based on business needs and in consultation with CTO
+- Oversaw people managers covering individual strategic areas of Platform
+- Planned an oversaw expansion of core application and supporting infrastructure into the US, to support the business's US expansion
 
 ### Head of Infrastructure and SRE ###
 *December 2019 to Jan 2021*
 - Took over management of the Infrastructure and SRE team, growing it to three engineers. 
 - Managed SLOs and ongoing improvement of product reliability, both through strategic projects and ongoing learning processes such as post mortems
-- Ran oncall shift
+- Ran oncall shift, maintaining and developing tools and systems to run a sustainable rotation
 - Oversaw rapid scale-up during the 2020 switch to remote learning, growing from 10,000 concurrent users to over 80,000 concurrent users
 
 ### Senior Software Engineer ###
@@ -34,6 +36,7 @@ Northcote, VIC, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 - Senior member of operations team responsible for availablity of site servicing over **10,000 simultaneous users**
 - Developed alerting and monitoring systems in **Prometheus** to improve reliability, observability, and decrease page rates
 - Simplified management of production infrastructure from internally developed tools to standardised, industry proven technologies such as **Terraform**
+- Consistently identified cost-saving projects to reduce AWS spend, results in tens of thousands of dollars of savings for the businesss
 - Also contributed to backend developement on our **Ruby** and **Docker** based **microservice** stack
 
 ## Landchecker ##
@@ -42,17 +45,10 @@ Northcote, VIC, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 
 Oversaw development, delivery and operation of a popular real estate site, written using Rails, Ember.js, PostGIS, Mapbox, and running off tonnes of open government data.
 
-- **Grew team** from 1 developer to 4 mutli-disciplined engineers
 - Quickly expanded knowledge across all technical and business aspects of product
-- **Managed software delivery** and day-to-day operation of team
-- Implemented **sprints** and process for planning and tracking work, **code reviews**, **post mortems**
-- Responsible for **estimation**, **forecasting**, **planning** and **hiring** to meet needs of growing organisation
-- Continued **operations** role managing infrastructure (**Kubernetes**, **AWS**, **CI pipelines**, and **system observability**)
-- Ongoing ownership of **ETL** pipelines and data products, primary touch point for domain data knowledge
-- Designed and implemented **QA strategy** to ease growth of team, **CI** using **Travis**
-- Handled **product management** and **product roadmap**, pushed for addition of a formal Product Manager position, and worked with PM to design a system for managing roadmap
+- **Grew team** from 1 developer to 4 mutli-disciplined engineers. **Managed software delivery** and day-to-day operation of team
+- Implemented **sprints**, **code reviews**, **post mortems**, and **QA strategy** to ease growth of team
 - **Managed relationships** and planning for third party integrations and partnerships
-- Pushed for increased focus on **analytics** and **customer relationship management** using **Mixpanel** and **Intercom**
 - Delivered multiple new products in short timeframe. Pushed for MVP where possible and used evidence based decision making
 - Managed planning and expansion of product from Victoria into NSW
 
@@ -65,11 +61,8 @@ Data and operations specialist working under CTO building a real estate start up
 - Developed new **ETL pipeline** using **Airflow**, **Terraform**, **Docker**, **Kubernetes**, to meet growing data needs of business
 - Moved internal tools onto **Kubernetes**, making management simpler, lowering AWS costs and easing deployment of new apps
 - Set up **Metabase** to allow easy generation of analytics by both technical and business staff
-- Web scraping using **Node.js** and **Docker**
 - Set up monitoring and tracing using **ELK**, **Datadog**, **Statuscake** to solve issues with system observability
 - Backend software development of the **Rails** **API**
-- **Documentation** of existing system, and started maintaining **onboarding** documentation
-- Worked with outgoing CTO to handle **technical transfer**
 
 ## JBA Digital
 ### Senior Software Developer - Data Science
