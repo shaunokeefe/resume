@@ -8,7 +8,7 @@ Northcote, VIC, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 * Extensive **management** experience, particularly in building **close-knit, high-performing teams**
 * Can work on high level **strategy** for supporting business through reliable, maintainable infrastructure
 * Experience with **cloud native** architecture using **Docker**, **Consul** and **Kubernetes**
-* Extensive infrastructure experience working with **AWS**. **Terraform** for **Infrastructure as Code*
+* Extensive infrastructure experience working with **AWS**. **Terraform** for **Infrastructure as Code**
 * System observability and reliability. **Monitoring** and **alerting** with **Prometheus**, **tracing** with **Jaeger**
 * Experienced with **continuous integration**, **continuous delivery**, **Buildkite**
 * Strong operations skills. Does okay with **Linux** 
