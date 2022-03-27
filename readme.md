@@ -1,43 +1,49 @@
 
-# Shaun O'Keefe - Infrastructure engineer, manager
+# Shaun O'Keefe - Platform Engineer, Engineering Manager
 
 Northcote, VIC, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 
 # Skills
-* Experienced **devops** guy, **SRE** and **engineering lead**
+* Experienced **Engineering Manager**, **SRE** and **Platform Engineer**
 * Extensive **management** experience, particularly in building **close-knit, high-performing teams**
-* Can work on high level **strategy** for supporting business through reliable, maintainable infrastructure
-* Experience with **cloud native** architecture using **Docker**, **Consul** and **Kubernetes**
+* Can map business needs to a **strategy** for building out and maintaining internal infrastructure and tooling
+* Experience with **cloud native** architecture 
+* Years of running and participating in **oncall** rotations
 * Extensive infrastructure experience working with **AWS**. **Terraform** for **Infrastructure as Code**
-* System observability and reliability. **Monitoring** and **alerting** with **Prometheus**, **tracing** with **Jaeger**
+* Knows lots about **system observability**, **monitoring** and **alerting**
 * Experienced with **continuous integration**, **continuous delivery**, **Buildkite**
 * Strong operations skills. Does okay with **Linux** 
-* Developing in **Python**, **Ruby** and **Rust**
-
+* Developing in **Python**, **Ruby**, and **Rust**
+* Tries very hard to always be **nice**
 
 # Where I've Worked
 ## Stile Education ##
 ### Head of Platform ###
 *Jan 2021 to present*
-- Took over strategic remit of CI, developer experience and data to provide an overall platform for application developers to deliver business value
-- Developer hiring strategy based on business needs and in consultation with CTO
-- Oversaw people managers covering individual strategic areas of Platform
-- Planned an oversaw expansion of core application and supporting infrastructure into the US, to support the business's US expansion
+- Took over **strategic remit of CI, developer experience and data** (in addition to **Infrastructure and SRE**) to provide an overall platform for application developers to deliver new features
+- Developed **hiring strategy** in consultation with CTO and grew the team from three to 8 engineers
+- Developed new managers from within the team, identifying and delegating to strengths
+- Provided **technical mentorship and coaching** to developing staff
+- Planned an oversaw expansion of core application and supporting infrastructure into the US as a **multi-region application**, to support the business's **US expansion**
+- Ran multiple **oncall** rotations to maintain both the main Stile application and internal services to a high standard
+- Ran Stile's **Women in STEM internship**, providing an opportunity for women who have recently graduated high school to train as software engineers
 
 ### Head of Infrastructure and SRE ###
 *December 2019 to Jan 2021*
-- Took over management of the Infrastructure and SRE team, growing it to three engineers. 
-- Managed SLOs and ongoing improvement of product reliability, both through strategic projects and ongoing learning processes such as post mortems
-- Ran oncall shift, maintaining and developing tools and systems to run a sustainable rotation
-- Oversaw rapid scale-up during the 2020 switch to remote learning, growing from 10,000 concurrent users to over 80,000 concurrent users
+- Took over management of the **Infrastructure and SRE** team, growing it to three engineers. 
+- **Managed SLOs** and ongoing improvement of **product reliability**, both through strategic projects and ongoing learning processes such as post mortems
+- Ran and participated in **oncall shift**, maintaining and developing tools and systems to run a sustainable rotation
+- Oversaw rapid scale-up during the 2020 switch to remote learning, **growing from 10,000 concurrent users to over 80,000 concurrent users**
+- Continued to have an extensive role in core software development within the team
+
 
 ### Senior Software Engineer ###
 *March 2018 to December 2019*
 - Senior member of operations team responsible for availablity of site servicing over **10,000 simultaneous users**
-- Developed alerting and monitoring systems in **Prometheus** to improve reliability, observability, and decrease page rates
+- Developed alerting and monitoring systems in **Prometheus** and **Pagerduty** to improve reliability, observability, and decrease page rates
 - Simplified management of production infrastructure from internally developed tools to standardised, industry proven technologies such as **Terraform**
 - Consistently identified cost-saving projects to reduce AWS spend, results in tens of thousands of dollars of savings for the businesss
-- Also contributed to backend developement on our **Ruby** and **Docker** based **microservice** stack
+- Also contributed to backend developement of our stack working with **Ruby** and **Docker**
 
 ## Landchecker ##
 ### Chief Technical Officer ###
@@ -51,6 +57,7 @@ Oversaw development, delivery and operation of a popular real estate site, writt
 - **Managed relationships** and planning for third party integrations and partnerships
 - Delivered multiple new products in short timeframe. Pushed for MVP where possible and used evidence based decision making
 - Managed planning and expansion of product from Victoria into NSW
+- Maintained 
 
 ## Landchecker ##
 ### Software Developer ###
@@ -59,7 +66,7 @@ Oversaw development, delivery and operation of a popular real estate site, writt
 Data and operations specialist working under CTO building a real estate start up
 
 - Developed new **ETL pipeline** using **Airflow**, **Terraform**, **Docker**, **Kubernetes**, to meet growing data needs of business
-- Moved internal tools onto **Kubernetes**, making management simpler, lowering AWS costs and easing deployment of new apps
+- Moved internal tools and data pipelines onto **Kubernetes**, making management simpler, lowering AWS costs and easing deployment of new apps
 - Set up **Metabase** to allow easy generation of analytics by both technical and business staff
 - Set up monitoring and tracing using **ELK**, **Datadog**, **Statuscake** to solve issues with system observability
 - Backend software development of the **Rails** **API**
@@ -129,8 +136,8 @@ Completed a year’s exchange studying Japanese. Completed extra units of study 
 
 References
 ==========
+Matthew Borden | SRE, Buildkite
+
 Timothy Asquith | Senior Software Developer, Blake Education
 
-Andrew Fisher | CTO, LUXE
-
-Matthew Duggan | Engineering Manager, Indeed Japan
+Matthew Duggan | Engineering Manager, Google Japan
