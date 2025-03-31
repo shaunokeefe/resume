@@ -1,0 +1,52 @@
+name: Convert Markdown to PDF
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - '**.md'
+
+jobs:
+  convert_to_pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Required to get all history for proper commit messages
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          
+      - name: Install md-to-pdf
+        run: npm install -g md-to-pdf
+
+      - name: Find modified markdown files
+        id: changed-files
+        uses: tj-actions/changed-files@v35
+        with:
+          files: |
+            **/*.md
+
+      - name: Convert Markdown to PDF
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            if [[ $file == *.md ]]; then
+              echo "Converting $file to PDF"
+              # Create directory for the PDF if it doesn't exist
+              mkdir -p "$(dirname "${file%.*}.pdf")"
+              # Convert markdown to PDF
+              md-to-pdf "$file"
+            fi
+          done
+
+      - name: Commit PDF files
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add **/*.pdf
+          git diff --quiet && git diff --staged --quiet || git commit -m "Generate PDFs from markdown files" -a
+          git push
