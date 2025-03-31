@@ -56,13 +56,32 @@ jobs:
                 -V colorlinks=true \
                 -V urlcolor=blue \
                 --toc
+              
+              # Debug: Check if PDF was created
+              if [ -f "${file%.*}.pdf" ]; then
+                echo "✅ Successfully created ${file%.*}.pdf"
+              else
+                echo "❌ Failed to create ${file%.*}.pdf"
+              fi
             fi
           done
+          
+          # Debug: List all PDFs in repository
+          echo "Listing all PDF files:"
+          find . -name "*.pdf" -type f
 
       - name: Commit PDF files
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add **/*.pdf
-          git diff --quiet && git diff --staged --quiet || git commit -m "Generate PDFs from markdown files" -a
-          git push
+          
+          # Use find to add PDFs instead of wildcard
+          find . -name "*.pdf" -type f -exec git add {} \;
+          
+          # Try to commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Generate PDFs from markdown files"
+            git push
+          fi
