@@ -5,6 +5,13 @@ on:
     branches: [ main, master ]
     paths:
       - '**.md'
+  workflow_dispatch:
+    inputs:
+      debug_enabled:
+        description: 'Run the workflow with debug logging'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   convert_to_pdf:
@@ -15,16 +22,15 @@ jobs:
         with:
           fetch-depth: 0  # Required to get all history for proper commit messages
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Pandoc
+        uses: r-lib/actions/setup-pandoc@v2
         with:
-          node-version: '16'
-          
-      - name: Install md-to-pdf and configure for GitHub Actions
-        run: |
-          npm install -g md-to-pdf
-          mkdir -p ~/.config/
-          echo '{"pdf": {"chromiumArgs": ["--no-sandbox"]}}' > ~/.config/md-to-pdf.json
+          pandoc-version: '3.1.1'
+
+      - name: Setup LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: ""  # We're not directly compiling LaTeX files
 
       - name: Find modified markdown files
         id: changed-files
@@ -41,8 +47,16 @@ jobs:
               echo "Converting $file to PDF"
               # Create directory for the PDF if it doesn't exist
               mkdir -p "$(dirname "${file%.*}.pdf")"
-              # Convert markdown to PDF
-              md-to-pdf "$file"
+              # Convert markdown to PDF using pandoc with PDF engine
+              pandoc "$file" \
+                -o "${file%.*}.pdf" \
+                --pdf-engine=xelatex \
+                -V geometry:margin=1in \
+                -V documentclass=article \
+                -V colorlinks=true \
+                -V linkcolor=blue \
+                -V urlcolor=blue \
+                --toc
             fi
           done
 
