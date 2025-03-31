@@ -25,6 +25,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic
 
+      - name: Install additional fonts
+        run: |
+          sudo apt-get install -y fonts-liberation fonts-dejavu
+
       - name: Convert README to PDF
         run: |
           echo "Converting readme.md to PDF"
@@ -32,7 +36,7 @@ jobs:
           # Create a custom CSS file for modern styling
           cat > modern-style.css << 'EOL'
           body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: 'Liberation Sans', Arial, sans-serif;
             line-height: 1.6;
             max-width: 100%;
             margin: 0 auto;
@@ -60,7 +64,7 @@ jobs:
             text-decoration: none;
           }
           code {
-            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            font-family: 'DejaVu Sans Mono', Consolas, monospace;
             background-color: #f6f8fa;
             padding: 0.2em 0.4em;
             border-radius: 3px;
@@ -108,7 +112,7 @@ jobs:
             -V colorlinks=true \
             -V urlcolor=#0366d6 \
             -V linkcolor=#0366d6 \
-            -V mainfont="Helvetica Neue" \
+            -V mainfont="Liberation Sans" \
             -V monofont="DejaVu Sans Mono" \
             --css=modern-style.css \
             --highlight-style=tango
