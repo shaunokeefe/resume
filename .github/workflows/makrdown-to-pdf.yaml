@@ -111,7 +111,7 @@ jobs:
             -V mainfont="Helvetica Neue" \
             -V monofont="DejaVu Sans Mono" \
             --css=modern-style.css \
-            --highlight-style=github
+            --highlight-style=tango
           
           # Debug: Check if PDF was created
           if [ -f "readme.pdf" ]; then
