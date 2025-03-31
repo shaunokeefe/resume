@@ -28,7 +28,7 @@ Northcote, VIC, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 - Developed team's **operational posture**. Drastically reduced number of incidents, MTTR, and turn around time on incident actions
 
 ### Staff Software Engineer - Developer Platform ###
-*Jun 2022 to Dec2023*
+*Jun 2022 to Dec 2023*
 - Ran group-widge initiative helping all teams **develop product and service definitions** to **improve reliability** and **reduce change defects**
 - **Developed SLOs** with a number of teams to form a basis for **improved alerting** and **risk management**
 - Implemented **data pipelines, tool instrumentation and visualisations** to allow developers and leadership to understand which tools and processes were bottlenecks in the SDLC
