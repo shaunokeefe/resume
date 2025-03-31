@@ -20,8 +20,11 @@ jobs:
         with:
           node-version: '16'
           
-      - name: Install md-to-pdf
-        run: npm install -g md-to-pdf
+      - name: Install md-to-pdf and configure for GitHub Actions
+        run: |
+          npm install -g md-to-pdf
+          mkdir -p ~/.config/
+          echo '{"pdf": {"chromiumArgs": ["--no-sandbox"]}}' > ~/.config/md-to-pdf.json
 
       - name: Find modified markdown files
         id: changed-files
