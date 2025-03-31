@@ -9,15 +9,33 @@ Northcote, VIC, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 * Can map business needs to a **strategy** for building out and maintaining internal infrastructure and tooling
 * Experience with **cloud native** architecture 
 * Years of running and participating in **oncall** rotations
-* Extensive infrastructure experience working with **AWS**. **Terraform** for **Infrastructure as Code**
-* Knows lots about **system observability**, **monitoring** and **alerting**
-* Experienced with **continuous integration**, **continuous delivery**, **Buildkite**
-* Strong operations skills. Does okay with **Linux** 
-* Developing in **Python**, **Ruby**, and **Rust**
+* Extensive infrastructure experience working with **AWS** and **Kubernetes**. **Terraform**, **Helm** and **Jsonnet** for **Infrastructure as Code**
+* Knows lots about **observability** and **monitoring**, especially with **Mimir**, **Prometheus** and **Datadog**
+* Experienced with **continuous integration**, **continuous delivery**, **Buildkite**, **Argo**
+* Strong operations skills. Does fine with **Linux** 
+* Developing in **Python** and **Golang**
 * Tries very hard to always be **nice**
 
 # Where I've Worked
-## Stile Education ##
+## Canva ## 
+### Staff Software Engineer - Observability ###
+*Dec 2023 to present*
+- Tech lead on **migration project** to **develop new internal metric platform**,
+- Responsible for planning and delivery, as well as directly implementation
+- **Tuned** the platform to meet ambitious performance targets
+- **Scaled platform** to handle 100's of millions of active timeseries, serving over 1000 engineers
+- Developed educational materials, ran workshops and performed outreach to **accelerate uptake of the platform**
+- Developed team's **operational posture**. Drastically reduced number of incidents, MTTR, and turn around time on incident actions
+
+### Staff Software Engineer - Developer Platform ###
+*Jun 2022 to Dec2023*
+- Ran group-widge initiative helping all teams **develop product and service definitions** to **improve reliability** and **reduce change defects**
+- **Developed SLOs** with a number of teams to form a basis for **improved alerting** and **risk management**
+- Implemented **data pipelines, tool instrumentation and visualisations** to allow developers and leadership to understand which tools and processes were bottlenecks in the SDLC
+- Developed group-wide **ops review processes** and educated teams on how to conduct ops reviews and **incident response**
+- Lead the development of the group's **5 year vision document**, liasing with top leadership, group leadership and team leads
+
+## Stile Education ## 
 ### Head of Platform ###
 *Jan 2021 to present*
 - Took over **strategic remit of CI, developer experience and data** (in addition to **Infrastructure and SRE**) to provide an overall platform for application developers to deliver new features
