@@ -22,15 +22,10 @@ jobs:
         with:
           fetch-depth: 0  # Required to get all history for proper commit messages
 
-      - name: Setup Pandoc
-        uses: r-lib/actions/setup-pandoc@v2
-        with:
-          pandoc-version: '3.1.1'
-
-      - name: Install LaTeX
+      - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-plain-generic
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic
 
       - name: Find modified markdown files
         id: changed-files
@@ -38,6 +33,11 @@ jobs:
         with:
           files: |
             **/*.md
+
+      - name: List changed files (debug)
+        run: |
+          echo "Changed files:"
+          echo "${{ steps.changed-files.outputs.all_changed_files }}"
 
       - name: Convert Markdown to PDF
         if: steps.changed-files.outputs.any_changed == 'true'
@@ -54,7 +54,6 @@ jobs:
                 -V geometry:margin=1in \
                 -V documentclass=article \
                 -V colorlinks=true \
-                -V linkcolor=blue \
                 -V urlcolor=blue \
                 --toc
             fi
