@@ -20,7 +20,7 @@ Northcote, VIC, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 ## Canva ## 
 ### Staff Software Engineer - Observability ###
 *Dec 2023 to present*
-- Tech lead on **migration project** to **develop new internal metric platform**,
+- Tech lead on **migration project** to **develop new internal metric platform**
 - Responsible for **planning** and **delivery**, as well as directl **implementation**
 - **Tuned** the platform to meet ambitious performance targets
 - **Scaled platform** to handle 100's of millions of active timeseries, serving over 1000 engineers
