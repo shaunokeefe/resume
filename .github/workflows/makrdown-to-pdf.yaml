@@ -28,14 +28,90 @@ jobs:
       - name: Convert README to PDF
         run: |
           echo "Converting readme.md to PDF"
+          
+          # Create a custom CSS file for modern styling
+          cat > modern-style.css << 'EOL'
+          body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 100%;
+            margin: 0 auto;
+            color: #333;
+          }
+          h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.25;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            color: #000;
+          }
+          h1 {
+            font-size: 2.2em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.3em;
+          }
+          h2 {
+            font-size: 1.7em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.3em;
+          }
+          a {
+            color: #0366d6;
+            text-decoration: none;
+          }
+          code {
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            background-color: #f6f8fa;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-size: 0.9em;
+          }
+          pre {
+            background-color: #f6f8fa;
+            border-radius: 3px;
+            padding: 16px;
+            overflow: auto;
+            font-size: 0.9em;
+          }
+          blockquote {
+            padding: 0 1em;
+            color: #6a737d;
+            border-left: 0.25em solid #dfe2e5;
+            margin: 0;
+          }
+          table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 16px;
+          }
+          table th, table td {
+            padding: 6px 13px;
+            border: 1px solid #dfe2e5;
+          }
+          table tr {
+            background-color: #fff;
+            border-top: 1px solid #c6cbd1;
+          }
+          table tr:nth-child(2n) {
+            background-color: #f6f8fa;
+          }
+          img {
+            max-width: 100%;
+          }
+          EOL
+          
           pandoc readme.md \
             -o readme.pdf \
             --pdf-engine=xelatex \
             -V geometry:margin=1in \
             -V documentclass=article \
             -V colorlinks=true \
-            -V urlcolor=blue \
-            --toc
+            -V urlcolor=#0366d6 \
+            -V linkcolor=#0366d6 \
+            -V mainfont="Helvetica Neue" \
+            -V monofont="DejaVu Sans Mono" \
+            --css=modern-style.css \
+            --highlight-style=github
           
           # Debug: Check if PDF was created
           if [ -f "readme.pdf" ]; then
