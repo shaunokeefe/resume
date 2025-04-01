@@ -59,6 +59,9 @@ jobs:
             border-bottom: 1px solid #eee;
             padding-bottom: 0.3em;
           }
+          h3 {
+            font-size: 1.3em;
+          }
           a {
             color: #0366d6;
             text-decoration: none;
@@ -86,14 +89,16 @@ jobs:
           ul, ol {
             padding-left: 2em;
             margin-bottom: 16px;
+            display: block;
           }
           li {
-            margin-bottom: 0.25em;
+            margin-bottom: 0.5em;
             display: list-item !important;
           }
           li p {
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
+            margin-top: 0.25em;
+            margin-bottom: 0.25em;
+            display: block !important;
           }
           table {
             border-collapse: collapse;
@@ -114,8 +119,61 @@ jobs:
           img {
             max-width: 100%;
           }
+          strong {
+            font-weight: 600;
+          }
+          /* Resume specific styles */
+          em {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #555;
+            display: block;
+            margin-bottom: 0.5em;
+          }
           EOL
           
+          # Create a simple LaTeX template with better list handling
+          cat > custom-template.tex << 'EOL'
+\documentclass[$if(fontsize)$fontsize$,$endif$if(lang)$babel-lang$,$endif$if(papersize)$papersize$paper,$endif$for(classoption)$classoption$sep$,$endfor$]{$documentclass$}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\setlist{nosep} % Reduce spacing between list items
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\definecolor{linkcolor}{HTML}{0366D6}
+\usepackage[setpagesize=false, % page size defined by xetex
+            unicode=false, % unicode breaks when used with xetex
+            xetex]{hyperref}
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={$author-meta$},
+            pdftitle={$title-meta$},
+            colorlinks=true,
+            citecolor=$if(citecolor)$citecolor$else$linkcolor$endif$,
+            urlcolor=$if(urlcolor)$urlcolor$else$linkcolor$endif$,
+            linkcolor=$if(linkcolor)$linkcolor$else$linkcolor$endif$,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+
+$if(mainfont)$
+    \setmainfont[$for(mainfontoptions)$mainfontoptions$sep$,$endfor$]{$mainfont$}
+$endif$
+$if(monofont)$
+    \setmonofont[Mapping=tex-ansi$if(monofontoptions)$,$for(monofontoptions)$monofontoptions$sep$,$endfor$endif$]{$monofont$}
+$endif$
+
+\begin{document}
+
+$body$
+
+\end{document}
+EOL
+
           pandoc readme.md \
             -o readme.pdf \
             --pdf-engine=xelatex \
@@ -126,6 +184,7 @@ jobs:
             -V linkcolor="blue" \
             -V mainfont="Liberation Sans" \
             -V monofont="DejaVu Sans Mono" \
+            --template=custom-template.tex \
             --css=modern-style.css \
             --highlight-style=tango
           
