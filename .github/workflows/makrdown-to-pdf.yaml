@@ -25,10 +25,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic fonts-liberation fonts-dejavu
 
-      - name: Convert README to PDF
+      - name: Create resume styling
         run: |
-          echo "Converting readme.md to PDF"
-          
           # Create a custom CSS file for modern styling
           cat > modern-style.css << 'EOL'
           body {
@@ -127,59 +125,49 @@ jobs:
             margin-bottom: 0.5em;
           }
           EOL
-          
+
+      - name: Create LaTeX template
+        run: |
           # Create a simple LaTeX template with better list handling
           cat > custom-template.tex << 'EOL'
-\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
-\usepackage{amssymb,amsmath}
-\usepackage{ifxetex,ifluatex}
-\usepackage{fixltx2e}
-\usepackage{enumerate}
-\usepackage[shortlabels]{enumitem}
-\setlist{nosep} % Reduce spacing between list items
-\setlist[itemize]{leftmargin=*}
-\setlist[enumerate]{leftmargin=*}
-\usepackage{lmodern}
-\usepackage{xcolor}
-\definecolor{linkcolor}{HTML}{0366D6}
-\usepackage[setpagesize=false, % page size defined by xetex
-            unicode=false, % unicode breaks when used with xetex
-            xetex]{hyperref}
-\hypersetup{breaklinks=true,
-            bookmarks=true,
-            pdfauthor={$author-meta$},
-            pdftitle={$title-meta$},
-            colorlinks=true,
-            citecolor=$if(citecolor)$$citecolor$$else$linkcolor$endif$,
-            urlcolor=$if(urlcolor)$$urlcolor$$else$linkcolor$endif$,
-            linkcolor=$if(linkcolor)$$linkcolor$$else$linkcolor$endif$,
-            pdfborder={0 0 0}}
-\urlstyle{same}  % don't use monospace font for urls
+          \documentclass[]{article}
+          \usepackage{amssymb,amsmath}
+          \usepackage{ifxetex,ifluatex}
+          \usepackage{fixltx2e}
+          \usepackage{enumerate}
+          \usepackage[shortlabels]{enumitem}
+          \setlist{nosep}
+          \setlist[itemize]{leftmargin=*}
+          \setlist[enumerate]{leftmargin=*}
+          \usepackage{lmodern}
+          \usepackage{xcolor}
+          \usepackage[setpagesize=false, unicode=false, xetex]{hyperref}
+          \hypersetup{breaklinks=true,
+                      bookmarks=true,
+                      colorlinks=true,
+                      urlcolor=blue,
+                      linkcolor=blue,
+                      pdfborder={0 0 0}}
+          \urlstyle{same}
+          
+          \setmainfont{Liberation Sans}
+          \setmonofont{DejaVu Sans Mono}
+          
+          \begin{document}
+          
+          $body$
+          
+          \end{document}
+          EOL
 
-$if(mainfont)$
-    \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
-$endif$
-$if(monofont)$
-    \setmonofont[Mapping=tex-ansi$if(monofontoptions)$,$for(monofontoptions)$$monofontoptions$$sep$,$endfor$$endif$]{$monofont$}
-$endif$
-
-\begin{document}
-
-$body$
-
-\end{document}
-EOL
-
+      - name: Convert README to PDF
+        run: |
+          echo "Converting readme.md to PDF"
+          
           pandoc readme.md \
             -o readme.pdf \
             --pdf-engine=xelatex \
             -V geometry:margin=1in \
-            -V documentclass=article \
-            -V colorlinks=true \
-            -V urlcolor="blue" \
-            -V linkcolor="blue" \
-            -V mainfont="Liberation Sans" \
-            -V monofont="DejaVu Sans Mono" \
             --template=custom-template.tex \
             --css=modern-style.css \
             --highlight-style=tango
@@ -187,12 +175,10 @@ EOL
           # Debug: Check if PDF was created
           if [ -f "readme.pdf" ]; then
             echo "✅ Successfully created readme.pdf"
+            ls -la readme.pdf
           else
             echo "❌ Failed to create readme.pdf"
           fi
-          
-          # List the generated PDF
-          ls -la readme.pdf
 
       - name: Commit PDF file
         run: |
