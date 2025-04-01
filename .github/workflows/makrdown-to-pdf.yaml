@@ -23,11 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic
-
-      - name: Install additional fonts
-        run: |
-          sudo apt-get install -y fonts-liberation fonts-dejavu
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic fonts-liberation fonts-dejavu
 
       - name: Convert README to PDF
         run: |
@@ -134,7 +130,7 @@ jobs:
           
           # Create a simple LaTeX template with better list handling
           cat > custom-template.tex << 'EOL'
-\documentclass[$if(fontsize)$fontsize$,$endif$if(lang)$babel-lang$,$endif$if(papersize)$papersize$paper,$endif$for(classoption)$classoption$sep$,$endfor$]{$documentclass$}
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e}
@@ -154,17 +150,17 @@ jobs:
             pdfauthor={$author-meta$},
             pdftitle={$title-meta$},
             colorlinks=true,
-            citecolor=$if(citecolor)$citecolor$else$linkcolor$endif$,
-            urlcolor=$if(urlcolor)$urlcolor$else$linkcolor$endif$,
-            linkcolor=$if(linkcolor)$linkcolor$else$linkcolor$endif$,
+            citecolor=$if(citecolor)$$citecolor$$else$linkcolor$endif$,
+            urlcolor=$if(urlcolor)$$urlcolor$$else$linkcolor$endif$,
+            linkcolor=$if(linkcolor)$$linkcolor$$else$linkcolor$endif$,
             pdfborder={0 0 0}}
 \urlstyle{same}  % don't use monospace font for urls
 
 $if(mainfont)$
-    \setmainfont[$for(mainfontoptions)$mainfontoptions$sep$,$endfor$]{$mainfont$}
+    \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
 $endif$
 $if(monofont)$
-    \setmonofont[Mapping=tex-ansi$if(monofontoptions)$,$for(monofontoptions)$monofontoptions$sep$,$endfor$endif$]{$monofont$}
+    \setmonofont[Mapping=tex-ansi$if(monofontoptions)$,$for(monofontoptions)$$monofontoptions$$sep$,$endfor$$endif$]{$monofont$}
 $endif$
 
 \begin{document}
@@ -194,6 +190,9 @@ EOL
           else
             echo "❌ Failed to create readme.pdf"
           fi
+          
+          # List the generated PDF
+          ls -la readme.pdf
 
       - name: Commit PDF file
         run: |
