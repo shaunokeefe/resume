@@ -35,6 +35,7 @@ jobs:
             max-width: 100%;
             margin: 0 auto;
             color: #333;
+            counter-reset: none;
           }
           h1, h2, h3, h4, h5, h6 {
             font-weight: 600;
@@ -42,6 +43,10 @@ jobs:
             margin-top: 1.5em;
             margin-bottom: 0.5em;
             color: #000;
+            counter-reset: none;
+          }
+          h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
+            content: none;
           }
           h1 {
             font-size: 2.2em;
@@ -122,9 +127,12 @@ jobs:
             font-size: 0.9em;
             color: #555;
             display: block;
-            margin-bottom: 0.5em;
+            margin-bottom: 1.5em;  /* Increased space after date section */
           }
           EOL
+          
+          # Save CSS to a separate file for download
+          cp modern-style.css /tmp/modern-style.css
 
       - name: Create LaTeX template
         run: |
@@ -143,6 +151,13 @@ jobs:
           \usepackage{lmodern}
           \usepackage{xcolor}
           \usepackage{fontspec}
+          
+          % Remove section numbering
+          \usepackage{titlesec}
+          \titleformat{\section}{\Large\bfseries}{}{0em}{}
+          \titleformat{\subsection}{\large\bfseries}{}{0em}{}
+          \titleformat{\subsubsection}{\bfseries}{}{0em}{}
+          
           \usepackage[setpagesize=false, unicode=false, xetex]{hyperref}
           \hypersetup{breaklinks=true,
                       bookmarks=true,
@@ -167,6 +182,9 @@ jobs:
           
           \end{document}
           EOL
+          
+          # Save template to a separate file for download
+          cp custom-template.tex /tmp/custom-template.tex
 
       - name: Convert README to PDF
         run: |
@@ -196,6 +214,14 @@ jobs:
           else
             echo "❌ Failed to create readme.pdf"
           fi
+          
+      - name: Upload CSS and Template files as artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: resume-styling-files
+          path: |
+            /tmp/modern-style.css
+            /tmp/custom-template.tex
 
       - name: Commit PDF file
         run: |
