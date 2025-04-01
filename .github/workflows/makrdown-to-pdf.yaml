@@ -136,11 +136,13 @@ jobs:
           \usepackage{fixltx2e}
           \usepackage{enumerate}
           \usepackage[shortlabels]{enumitem}
+          % Resume-specific list settings
           \setlist{nosep}
-          \setlist[itemize]{leftmargin=*}
-          \setlist[enumerate]{leftmargin=*}
+          \setlist[itemize]{leftmargin=*, itemsep=3pt, parsep=0pt}
+          \setlist[enumerate]{leftmargin=*, itemsep=3pt, parsep=0pt}
           \usepackage{lmodern}
           \usepackage{xcolor}
+          \usepackage{fontspec}
           \usepackage[setpagesize=false, unicode=false, xetex]{hyperref}
           \hypersetup{breaklinks=true,
                       bookmarks=true,
@@ -150,8 +152,14 @@ jobs:
                       pdfborder={0 0 0}}
           \urlstyle{same}
           
+          % Better handling of hyphens in lists
+          \def\tightlist{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+          
           \setmainfont{Liberation Sans}
           \setmonofont{DejaVu Sans Mono}
+          
+          % Better handling of page margins for resumes
+          \usepackage[margin=1in]{geometry}
           
           \begin{document}
           
@@ -164,13 +172,22 @@ jobs:
         run: |
           echo "Converting readme.md to PDF"
           
+          # Create a backup of the original file
+          cp readme.md readme.md.bak
+          
+          # Apply a small preprocessing fix for lists if needed
+          sed -i 's/^- /\n- /g' readme.md
+          
           pandoc readme.md \
             -o readme.pdf \
             --pdf-engine=xelatex \
-            -V geometry:margin=1in \
+            -V papersize=letter \
             --template=custom-template.tex \
             --css=modern-style.css \
             --highlight-style=tango
+          
+          # Restore original file
+          mv readme.md.bak readme.md
           
           # Debug: Check if PDF was created
           if [ -f "readme.pdf" ]; then
