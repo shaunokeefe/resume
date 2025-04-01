@@ -37,7 +37,7 @@ Northcote, VIC, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 
 ## Stile Education ## 
 ### Head of Platform ###
-*Jan 2021 to present*
+*Jan 2021 to Jun 2022*
 - Took over **strategic remit of CI, developer experience and data** (in addition to **Infrastructure and SRE**) to provide an overall platform for application developers to deliver new features
 - Developed **hiring strategy** in consultation with CTO and grew the team from three to 8 engineers
 - Developed new managers from within the team, identifying and delegating to strengths
