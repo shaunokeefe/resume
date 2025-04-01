@@ -110,8 +110,8 @@ jobs:
             -V geometry:margin=1in \
             -V documentclass=article \
             -V colorlinks=true \
-            -V urlcolor=#0366d6 \
-            -V linkcolor=#0366d6 \
+            -V urlcolor="blue" \
+            -V linkcolor="blue" \
             -V mainfont="Liberation Sans" \
             -V monofont="DejaVu Sans Mono" \
             --css=modern-style.css \
