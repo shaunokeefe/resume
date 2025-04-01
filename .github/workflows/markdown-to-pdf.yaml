@@ -25,10 +25,9 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic fonts-liberation fonts-dejavu
 
-      - name: Create minimal template
+      - name: Create GitHub-style template
         run: |
-          # Create a very simple template to debug issues
-          cat > minimal-template.tex << 'EOF'
+          cat > github-template.tex << 'EOF'
           \documentclass[11pt]{article}
           \usepackage{amssymb,amsmath}
           \usepackage{fixltx2e}
@@ -41,19 +40,33 @@ jobs:
           
           % Add hyperref package for \hypertarget command
           \usepackage{hyperref}
+          \hypersetup{
+            colorlinks=true,
+            linkcolor=blue,
+            urlcolor=blue
+          }
           
-          % Remove section numbering
-          \titleformat{\section}{\Large\bfseries}{}{0em}{}
-          \titleformat{\subsection}{\large\bfseries}{}{0em}{}
-          \titleformat{\subsubsection}{\bfseries}{}{0em}{}
+          % Define GitHub colors
+          \definecolor{githubBlack}{HTML}{24292E}
+          \definecolor{githubBlue}{HTML}{0366D6}
+          
+          % Remove section numbering and add GitHub-like styling
+          \titleformat{\section}{\Large\bfseries\color{githubBlack}}{}{0em}{}[\vspace{-0.3em}\rule{\textwidth}{0.1pt}]
+          \titleformat{\subsection}{\large\bfseries\color{githubBlack}}{}{0em}{}
+          \titleformat{\subsubsection}{\bfseries\color{githubBlack}}{}{0em}{}
 
-          % Better lists
-          \setlist[itemize]{leftmargin=*}
-
-          % Default font
+          % Better lists that look more like GitHub
+          \setlist[itemize]{leftmargin=*, itemsep=3pt}
+          
+          % Default font - use DejaVu Sans which is similar to GitHub's font
           \setmainfont{DejaVu Sans}
 
+          % Add more space after italicized job dates
+          \let\oldEmph\emph
+          \renewcommand{\emph}[1]{\oldEmph{#1}\vspace{0.5em}}
+
           \begin{document}
+          \color{githubBlack}
 
           $body$
 
@@ -63,18 +76,22 @@ jobs:
       - name: Preprocess README
         run: |
           cp readme.md readme_processed.md
+          # Ensure proper spacing for list items
           sed -i 's/^- /\n- /g' readme_processed.md
           sed -i 's/^\* /\n* /g' readme_processed.md
+          # Add blank lines before headings
+          sed -i 's/^##/\n##/g' readme_processed.md
+          sed -i 's/^###/\n###/g' readme_processed.md
 
-      - name: Convert with minimal template
+      - name: Convert with GitHub-style template
         run: |
-          echo "Converting with minimal template for debugging"
+          echo "Converting with GitHub-style template"
           
           pandoc readme_processed.md \
             -o readme.pdf \
             --pdf-engine=xelatex \
             -V papersize=letter \
-            --template=minimal-template.tex
+            --template=github-template.tex
           
           if [ -f "readme.pdf" ]; then
             echo "✅ Successfully created readme.pdf"
@@ -95,6 +112,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Generate PDF from readme.md (minimal template)"
+            git commit -m "Generate GitHub-styled PDF from readme.md"
             git push
           fi
