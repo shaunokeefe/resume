@@ -224,10 +224,7 @@ jobs:
           \def\tightlist{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
           % GitHub-like fonts
-          \setmainfont[
-            BoldFont={* Bold},
-            ItalicFont={* Italic}
-          ]{DejaVu Sans}
+          \setmainfont{DejaVu Sans}
           \setmonofont{DejaVu Sans Mono}
 
           % Better handling of page margins for resumes
@@ -279,7 +276,7 @@ jobs:
             -V papersize=letter \
             --template=styles/github-template.tex \
             --css=styles/github-style.css \
-            --highlight-style=github-dark
+            --highlight-style=tango
           
           # Clean up
           rm readme_processed.md
