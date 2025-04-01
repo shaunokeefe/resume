@@ -49,11 +49,17 @@ jobs:
           % Define GitHub colors
           \definecolor{githubBlack}{HTML}{24292E}
           \definecolor{githubBlue}{HTML}{0366D6}
+          \definecolor{githubGray}{HTML}{586069}
           
           % Remove section numbering and add GitHub-like styling
-          \titleformat{\section}{\Large\bfseries\color{githubBlack}}{}{0em}{}[\vspace{-0.3em}\rule{\textwidth}{0.1pt}]
-          \titleformat{\subsection}{\large\bfseries\color{githubBlack}}{}{0em}{}
-          \titleformat{\subsubsection}{\bfseries\color{githubBlack}}{}{0em}{}
+          \titleformat{\section}{\LARGE\bfseries\color{githubBlack}}{}{0em}{}[\vspace{-0.3em}\rule{\textwidth}{0.1pt}]
+          \titleformat{\subsection}{\large\bfseries\color{githubBlack}}{}{0em}{}[\vspace{-0.3em}\rule{\textwidth}{0.1pt}]
+          \titleformat{\subsubsection}{\normalsize\bfseries\color{githubBlack}}{}{0em}{}
+          
+          % Customize paragraph to be smaller than headings
+          \makeatletter
+          \renewcommand{\normalsize}{\@setfontsize\normalsize{10.5pt}{14pt}}
+          \makeatother
 
           % Better lists that look more like GitHub
           \setlist[itemize]{leftmargin=*, itemsep=3pt}
@@ -63,7 +69,13 @@ jobs:
 
           % Add more space after italicized job dates
           \let\oldEmph\emph
-          \renewcommand{\emph}[1]{\oldEmph{#1}\vspace{0.5em}}
+          \renewcommand{\emph}[1]{{\itshape\color{githubGray}#1\par\vspace{0.5em}}}
+
+          % Remove page numbers
+          \pagenumbering{gobble}
+
+          % Add some extra space at the top of the document
+          \setlength{\topmargin}{-0.5in}
 
           \begin{document}
           \color{githubBlack}
