@@ -29,7 +29,7 @@ Northcote, VIC, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 
 ### Staff Software Engineer - Developer Platform ###
 *Jun 2022 to Dec 2023*
-- Ran group-widge initiative helping all teams **develop product and service definitions** to **improve reliability** and **reduce change defects**
+- Ran group-wide initiative helping all teams **develop product and service definitions** to **improve reliability** and **reduce change defects**
 - **Developed SLOs** with a number of teams to form a basis for **improved alerting** and **risk management**
 - Implemented **data pipelines, tool instrumentation and visualisations** to allow developers and leadership to understand which tools and processes were bottlenecks in the SDLC
 - Developed group-wide **ops review processes** and educated teams on how to conduct ops reviews and **incident response**
