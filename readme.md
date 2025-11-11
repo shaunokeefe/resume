@@ -17,9 +17,17 @@ Northcote, VIC, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 * Tries very hard to always be **nice**
 
 # Where I've Worked
+## Blinq ##
+### Engineering Manager - SRE ###
+*July 2025 to present*
+- Managing a team of 3 SREs
+- Made case for and implemented restrucutre of oncall roster to lower engineer burden and improve incident response quality
+- Developed definitions of critical user workflows and rolled out SLOs and alerting to ensure high levels of oncall support
+- Developed a risk register and implemented mitigations for data risks
+
 ## Canva ## 
 ### Staff Software Engineer - Observability ###
-*Dec 2023 to present*
+*Dec 2023 to June 2025*
 - Tech lead on **migration project** to **develop new internal metric platform**
 - Responsible for **planning** and **delivery**, as well as direct **implementation**
 - **Tuned** the platform to meet ambitious performance targets
