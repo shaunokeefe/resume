@@ -17,9 +17,19 @@ Northcote, VIC, Australia | 0401411773 | shaun.okeefe.0@gmail.com
 * Tries very hard to always be **nice**
 
 # Where I've Worked
+## Aomidori ##
+### Founding member and SRE ###
+*January 2026 to present*
+- SRE working with start ups and scale ups to improve reliability, infrastructure, and manage costs 
+
+## Stile Education ##
+### Fractional SRE ###
+*January 2026 to present*
+- Part time engagement working with the Platform team on improving key observability and reliability systems 
+
 ## Blinq ##
 ### Engineering Manager - SRE ###
-*July 2025 to present*
+*July 2025 to December 2025*
 - Managing a team of 3 SREs
 - Made case for and implemented restrucutre of oncall roster to lower engineer burden and improve incident response quality
 - Developed definitions of critical user workflows and rolled out SLOs and alerting to ensure high levels of oncall support
