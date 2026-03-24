@@ -1,7 +1,7 @@
 
 # Shaun O'Keefe - Platform Engineer, Engineering Manager
 
-Northcote, VIC, Australia | 0401411773 | shaun.okeefe.0@gmail.com
+Northcote, VIC, Australia | 0401411773 | shaun@aomidori.au
 
 # Skills
 * Experienced **Engineering Manager**, **SRE** and **Platform Engineer**
