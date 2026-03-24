@@ -61,6 +61,9 @@ jobs:
           \renewcommand{\normalsize}{\@setfontsize\normalsize{10.5pt}{14pt}}
           \makeatother
 
+          % Define \tightlist used by pandoc for compact lists
+          \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
           % Better lists that look more like GitHub
           \setlist[itemize]{leftmargin=*, itemsep=3pt}
           
