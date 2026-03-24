@@ -5,6 +5,7 @@ on:
     branches: [ main, master ]
     paths:
       - 'readme.md'
+      - '.github/workflows/markdown-to-pdf.yaml'
   workflow_dispatch:
     inputs:
       debug_enabled:
